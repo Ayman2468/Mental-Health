@@ -10,6 +10,9 @@
                     @if(session()->has('success'))
                                     <div class="alert alert-success" role="alert">
                                         <strong>{{session()->get('success')}}</strong>
+                                        <a class="btn btn-primary" href="{{ url('home') }}">
+                                            {{ __('msg.Home') }}
+                                        </a>
                                     </div>
                     @endif
                     @if(session()->has('ident'))

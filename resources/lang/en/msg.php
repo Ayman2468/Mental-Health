@@ -15,6 +15,7 @@ return [
     'Register' => 'Register',
     'Delete' => 'Delete',
     'Edit' => 'Edit',
+    'Home' => 'Home',
     'Name_ar' => 'Name IN Arabic',
     'Name_en' => 'Name IN English',
     'Regist' => 'Regist',
@@ -148,4 +149,6 @@ return [
     'click here to request another' => 'click here to request another',
     'adminRegistration' => 'Admin Registration',
     'Edit Answer' => 'Edit Answer',
-];
+    'are you sure you want to delete this user'=>'are you sure you want to delete this user',
+    'you are not allowed to enter this page'=>'you are not allowed to enter this page',
+    ];

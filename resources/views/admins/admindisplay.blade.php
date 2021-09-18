@@ -9,7 +9,7 @@
     }
 </style>
 @if(session()->has('message'))
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-success" role="alert">
             <strong>{{session()->get('message')}}</strong>
         </div>
         @endif

@@ -67,7 +67,7 @@
                                 </button>
                                 </div>
                                 <div class="modal-body">
-                                {{__('msg.are you sure you want to delete this problem')}}
+                                {{__('msg.are you sure you want to delete this user')}}
                                 </div>
                                 <div class="modal-footer">
                                     <a href='{{ url('user/delete/'.$fetchedData->id) }}' class='btn btn-danger'>{{__('msg.Delete')}}</a>
@@ -83,6 +83,8 @@
            </tr>
      @endforeach
         </table>
+        <br>
+        <br>
         <div class="d-flex justify-content-center">
             {!!$usersdata->links()!!}
         </div>

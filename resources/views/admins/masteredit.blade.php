@@ -12,9 +12,13 @@
                                         <strong>{{session()->get('success')}}</strong>
                                     </div>
                     @endif
+                    @if(session()->has('ident'))
+                    <div class="alert alert-danger" role="alert">
+                        <strong>{{session()->get('ident')}}</strong>
+                    </div>
+                    @endif
                     <form method="POST" action="{{route('admins.masterupdate',$admindata->id)}}" enctype="multipart/form-data">
                         @csrf
-
 
                                 <input type="text" name="id" value="{{ $admindata->id }}" hidden>
 
@@ -49,7 +53,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('msg.Email') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{$admindata->email}}" autocomplete>
+                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{$admindata->email}}" autocomplete readonly>
 
                                 @error('email')
                                     <span class="invalid-feedback text-danger" role="alert">
@@ -68,6 +72,19 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="passwordconfirm" class="col-md-4 col-form-label text-md-right">{{ __('msg.Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="passwordconfirm" type="password" class="form-control @error('passwordconfirm') is-invalid @enderror" name="passwordconfirm" value="{{$admindata->password}}" required autocomplete="new-password">
+                                @error('passwordconfirm')
+                                <span class="invalid-feedback text-danger" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             </div>
                         </div>
 

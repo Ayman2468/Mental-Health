@@ -82,6 +82,8 @@
             </tr>
             @endforeach
         </table>
+        <br>
+        <br>
         <div class="d-flex justify-content-center">
             {!!$adminsdata->links()!!}
         </div>

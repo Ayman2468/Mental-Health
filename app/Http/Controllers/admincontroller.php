@@ -112,7 +112,11 @@ class admincontroller extends Controller
         }
 
         session()->flash('message', $message);
+        if(session('admindata')->position == "master") {
         return redirect('admin/index');
+        }else{
+            return redirect('admin/display');
+        }
     }
     public function masteredit($adminid)
     {
@@ -131,6 +135,7 @@ class admincontroller extends Controller
         if (!$admin) {
             return redirect('admin/index')->with(['message' => __('msg.admin doesn\'t exist')]);
         }
+        if ($request->password == $request->passwordconfirm) {
         $data = [
             'name_ar' => $request->name_ar,
             'name_en' => $request->name_en,
@@ -140,7 +145,9 @@ class admincontroller extends Controller
             'division' => $request->division,
             'mobile' => $request->mobile,
             'position' => $request->position,
-        ];
+        ];}else{
+            return redirect()->back()->withInput()->with(['ident' => __('msg.confirm password must be identical to password')]);
+        }
         if ($admin->password != $request->password) {
             $data['password'] = sha1($request->password);
         }

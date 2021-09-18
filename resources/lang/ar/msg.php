@@ -17,6 +17,7 @@ return [
     'Confirm Password' => 'تاكيد كلمة السر',
     'Delete' => 'حذف',
     'Edit' => 'تعديل',
+    'Home'=>'الرئيسية',
     'Name_ar' => 'الاسم باللغة العربية',
     'Name_en' => 'الاسم باللغة الانجليزية',
     'Regist' => 'سجل',
@@ -147,4 +148,7 @@ return [
     'click here to request another' => 'اضغط هنا لارسال رابط اخر',
     'adminRegistration' => 'تسجيل مشرف',
     'Edit Answer' => 'تعديل الحل',
+    'all problems deleted' => 'تم مسح جميع الحالات',
+    'are you sure you want to delete this user'=>'هل انت متاكد من حذف هذا المستخدم',
+    'you are not allowed to enter this page'=>'انت غير مسموح لك بدخول هذه الصفحه',
 ];

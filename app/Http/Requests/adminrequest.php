@@ -29,7 +29,7 @@ class adminrequest extends FormRequest
             'name_ar' => "required|max:50|unique:admins,name_ar,$adminid",
             'name_en' => "required|max:50|unique:admins,name_en,$adminid",
             'email' => "required|max:100|unique:admins,email,$adminid|email",
-            'password' => "required|min:8|",
+            'password' => "required|min:8",
             'passwordconfirm' => "required",
             'college' => 'required|max:50',
             'division' => 'required|max:50',
